@@ -1,0 +1,42 @@
+{
+  "name": "mina-gulp-cli",
+  "version": "0.0.1",
+  "description": "a light-weight wechat mina(mini program) client developing stage, powered by gulp",
+  "main": "gulpfiles.js",
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i Changelog.md -s"
+  },
+  "author": "milo",
+  "license": "MIT",
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0",
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-tap": "^1.0.1",
+    "gulp-webpack": "^1.5.0",
+    "minimist": "^1.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milobluebell/mina-gulp-cli.git"
+  },
+  "keywords": [
+    "mina",
+    "gulp",
+    "wechat",
+    "喜屋"
+  ],
+  "bugs": {
+    "url": "https://github.com/milobluebell/mina-gulp-cli/issues"
+  },
+  "homepage": "https://github.com/milobluebell/mina-gulp-cli#readme"
+}
