@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.1",
 	"appid": "wx3f8287d8b32c737d",
-	"projectname": "%2Fhome%2Fmilo%2Fwenjianbao-v3%2Fdist",
+	"projectname": "mina-gulp-cli-project",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
