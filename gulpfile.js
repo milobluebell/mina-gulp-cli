@@ -42,7 +42,6 @@ const copy = ()=> gulp.src(
 			'./src/**/*',
 			'!./src/**/*.scss',
 			'!./src/**/app.json',
-			'!./src/**/host.js'
 		]
 	)
 	.on('error', error=> {
@@ -53,7 +52,7 @@ const copy = ()=> gulp.src(
 //
 const appJson = ()=> gulp.src('./src/**/app.json')
 	.pipe(tap(file => {
-		const content = JSON.parse(file.contents.toString())
+		const content = JSON.parse(file.contents.toString());
 		const ROUTE = eval(fs.readFileSync('./src/mina/config/routes.js', 'utf-8'));
 		content.pages = [];
 		Object.values(ROUTE).forEach(item => {
@@ -93,22 +92,7 @@ const createElement = (type, name='customed-name')=> {
 
 //
 const throwError = type=> {
-	if(type === 'host'){
-		console.error('Fatal Error: gulp host方法需携带参数：');
-		console.group('--mock');
-			console.log('用例：  gulp host --mock');
-			console.log('描述：  mock假接口环境');
-		console.groupEnd();
-		console.group('--dev');
-			console.log('用例：  gulp host --dev');
-			console.log('描述：  开发环境');
-		console.groupEnd();
-		console.group('--prod');
-			console.log('用例：  gulp host --prod');
-			console.log('描述：  生产环境');
-		console.groupEnd();
-		console.error('否则会默认编译请求的域名为dev开发环境');
-	}else if(type === 'create'){
+	if(type === 'create'){
 		console.error('Fatal Error: gulp create方法必须携带以下一种参数：');
 		console.group('--page [?name]');
 			console.log('用例：  gulp create --page untitled');
@@ -124,15 +108,6 @@ const throwError = type=> {
 
 
 
-
-
-
-
-
-
-
-
-
 /****************************/
 /*****************************
  ***         TASKS         ***
@@ -145,45 +120,6 @@ const throwError = type=> {
 gulp.task('dist', async ()=> {
 	await dist('./dist');
 })
-
-
-
-
-
-
-
-
-
-/**
- * @description 根据环境对请求的baseUrl进行设定
- */
-gulp.task('host', () => gulp.src('./src/mina/config/host.js')
-	.pipe(tap(file=> {
-		let host;
-		if(arg.dev || arg.mock || arg.prod){
-			switch (arg) {
-				case 'mock':
-					host = '"http://193.112.40.217:7300/mock"';
-					break;
-				case 'dev':
-					host = '"https://www.xiaozhitianxia.com"';
-					break;
-				case 'prod':
-					host = '"https://www.filepro.cn"';
-					break;
-				default:
-					host = '"https://www.xiaozhitianxia.com"';
-					break;
-			}
-			file.contents = Buffer.from(`exports.HOST=${host};`, 'utf-8');
-		}else throwError('host');
-	}))
-	.pipe(gulp.dest('./src/vendor'))
-	.pipe(gulp.dest('./dist/vendor'))
-)
-
-
-
 
 /**
  * @description 清空dist文件夹
@@ -202,9 +138,6 @@ gulp.task('create', async ()=> {
 		}else throwError('create');
 	}
 });
-
-
-
 
 /**
  * @required
