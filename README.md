@@ -1,6 +1,7 @@
 # Mina-Gulp-Cli
 
 
+
 ## 一、针对哪些需求？
 
 * 快速搭建功能强大但轻量级的微信小程序开发环境
@@ -25,7 +26,6 @@
 ```
 git clone https://github.com/milobluebell/mina-gulp-cli.git [demo_project]
 ```
-
 
 ### 2⃣️ Step 2： 使用[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)，导入项目(指向项目根目录的./dist文件夹)： 
 ![Image text](https://raw.githubusercontent.com/milobluebell/imgs-repo/master/img/intro-pic.png)
