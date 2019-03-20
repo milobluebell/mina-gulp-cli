@@ -37,25 +37,26 @@ git clone https://github.com/milobluebell/mina-gulp-cli.git [demo_project]
 ```
 gulp dist
 ```
-可以见./dist文件夹中出现编译结果。欲进入开发环境，需再终端输入👇
-```
-gulp host --dev
-```
-这时已经把你的开发环境配置完毕，最后输入👇
+可以见./dist文件夹中出现编译结果。最后输入👇
 ```
 gulp watch
 ```
 即可开始在./src目录下，愉悦地开发了。
+（如果需要修改$http发送的请求的baseUrl，需要在./src/mina/utils/HttpClient/host.js中进行修改）
 
 
 
 ## 三、More 更多：
-### 长得帅的都扩展了阅读👇：
+
+### 1. 修改git远程refs
+
+
+
+### 2. 长得帅的都扩展了阅读👇：
 请见：Tell Me More
 
 
 
 ## 计划中陆续加入的功能：
-* 加入mobx状态管理工具，最方便快捷的应用数据状态管理工具。
 * 加入Eslint，更一致化的代码规范管理。
 * 使用npm全局命令，更方便地执行脚手架命令，托管更多你想配备的小程序。

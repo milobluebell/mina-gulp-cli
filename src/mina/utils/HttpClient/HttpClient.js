@@ -3,7 +3,7 @@
  * @description  **
  */
 import HttpResHandler from './handlers/HttpResHandler';
-import { HOST } from './host';
+import { MOCK_HOST } from './host';
 
 
 class $Http {
@@ -37,13 +37,14 @@ class $Http {
         if (typeof url === 'string' && typeof method === 'string') {
             return new Promise((resolve, reject) => {
                 wx.request({
-                    url: HOST + url || '',
+                    // TODO: 修改MOCK_HOST
+                    url: MOCK_HOST + url || '',
                     method,
                     header,
                     data,
                     success: res=> {
                         // ✏️ TODO: 填写要执行的正确响应的处理
-                        resolve(res);
+                        resolve(res.data);
                     },
                     fail: err=> {
                         // ✏️ TODO: 填写要执行的错误响应的处理

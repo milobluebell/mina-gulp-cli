@@ -6,9 +6,9 @@ App({
 		
 		// ✏️ TODO: 发送请求示例
 		$Http.get({
-			url: '/api/v3/adverImage/list/1/1?tagId='
+			url: '/app/mock/6799/global/getUserDetail'
 		}).then(res=> {
-			console.log(res);
+			
 		});
 
 		// 展示本地存储能力
