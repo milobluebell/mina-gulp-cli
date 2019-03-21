@@ -6,18 +6,11 @@ import StoreProto from './StoreProto';
 
 class $Store extends StoreProto {
 
-    // 全局store，会注入到所有使用store的page和component
-    store = {}
+    constructor () { super() }
 
-    constructor (storeOptions) {
-        // 必须是对象
-        if (storeOptions && typeof storeOptions === 'object') {
-            try {
-                this.store = {}
-            } catch (err) {
-                
-            };
-        }
+    // 全局store
+    store = {
+        test: 1
     }
 
 }

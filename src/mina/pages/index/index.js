@@ -24,9 +24,6 @@ Page(store.link({
 	},
 
 	onLoad: function () {
-		// this.setStore({
-		// 	logs: '1234'
-		// });
 		if (app.globalData.userInfo) {
 			this.setData({
 				userInfo: app.globalData.userInfo,
@@ -57,7 +54,12 @@ Page(store.link({
 	},
 
 	onShow: function (){
-		console.log(this.data);
+		console.log(this.store.actions);
+		setTimeout(()=> {
+			this.setStore({
+				a: 'bbbb'
+			})
+		}, 2000);
 	},
 
 	getUserInfo: function(e) {

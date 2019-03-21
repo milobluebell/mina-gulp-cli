@@ -58,6 +58,7 @@ const appJson = ()=> gulp.src('./src/**/app.json')
 		Object.values(ROUTE).forEach(item => {
 			content.pages.push(item.substr(1)); // 去掉前面的/
 		});
+		console.log(content);
 		file.contents = Buffer.from(JSON.stringify(content), 'utf-8');
 	}))
 
