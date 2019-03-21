@@ -1,9 +1,11 @@
 //app.js
 import $Http from './mina/utils/HttpClient/HttpClient';
+import $Store from './mina/utils/Store/Store';
 
+const store = new $Store();
 App({
 	onLaunch: function () {
-		
+
 		// ✏️ TODO: 发送请求示例
 		$Http.get({
 			url: '/app/mock/6799/global/getUserDetail'
@@ -47,5 +49,6 @@ App({
 	},
 	globalData: {
 		userInfo: null
-	}
+	},
+	store: store
 })

@@ -6,5 +6,5 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
   },
-  "debug": true
+  "debug": false
 }
