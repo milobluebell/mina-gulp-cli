@@ -1,8 +1,11 @@
 //logs.js
 import util from './../../utils/util';
+import logsStore from './logs.store';
 
 const store = getApp().store;
-Page({
+Page(store.link({
+
+	store: logsStore,
 
 	data: {
 		logs: []
@@ -17,41 +20,8 @@ Page({
 	},
 
 	onShow: function (){
-
-		console.log(store);
-
-		this.setStore({
-			logs: [1, 2, 3, 4],
-			testObj: {
-				a: {
-					testGun: [5, 6, 7, 8],
-					b: {
-						c: {
-							d: 1
-						}
-					}
-				}
-			}
-		});
-
-		setTimeout(()=> {
-			this.setStore({
-				logs: [1, 2],
-				testObj: {
-					b: {
-						ok: 2
-					}
-				}
-			});
-		}, 2000);
-
-		setTimeout(()=> {
-			this.setData({
-				logs: [1, 2, 3]
-			})
-		}, 4000);
-
+		console.log(store.set);
 	}
 
 
-})
+}))

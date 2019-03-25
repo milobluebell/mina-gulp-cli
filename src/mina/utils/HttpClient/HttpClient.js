@@ -28,7 +28,7 @@ const request = (url, data, method, header)=> {
                     // ✏️ TODO: 填写要执行的错误响应的处理
                     HttpResHandler.errorHandler(err);
                     reject(err);
-                },
+                }
             })
         })
     }else console.log('HttpClient接受的参数类型错误');
@@ -41,7 +41,7 @@ class $Http {
     static get (...args) {
         if(args.length === 1 && typeof args[0] === 'string'){
             return request(args[0], {}, 'GET', headers);
-        }else{
+        } else {
             const params = args[0];
             return request(params.url, params.data, 'GET', Object.assign(headers, params.headers || {}));
         }

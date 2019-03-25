@@ -10,7 +10,23 @@ class $Store extends StoreProto {
 
     // 全局store
     store = {
-        test: 1
+        index: {
+            a: '1234',
+        },
+        breadCrum: ['我', '和', '你', '还', '是', '他'],
+        navTitle: '测试一下呗',
+        breads: [
+            {
+                name: '第一个',
+                value: 1
+            },{
+                name: '第二个',
+                value: 2
+            },{
+                name: '第三个',
+                value: 3
+            }
+        ],
     }
 
 }

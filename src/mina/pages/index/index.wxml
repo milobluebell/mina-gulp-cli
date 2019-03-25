@@ -5,9 +5,15 @@
 		<block wx:else>
 			<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
 			<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+			<test />
 		</block>
 	</view>
 	<view class="usermotto">
 		<text class="user-motto">{{motto}} {{store.a}}</text>
+		<block wx:for="{{breads}}" wx:key="{{index}}">
+			<view data-index="{{index}}" bindtap="changeStore">{{index}}: {{item}}</view>
+		</block>
 	</view>
+
 </view>

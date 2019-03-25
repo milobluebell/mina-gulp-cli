@@ -53,8 +53,19 @@ Page(store.link({
 
 	},
 
+	changeStore: function (e){
+		console.log(e.currentTarget.dataset.index);
+		store.updateStore('breadCrum', {
+			
+		});
+	},
+
 	onShow: function (){
-		console.log(this.store.actions);
+
+		this.setData({
+			breads: store.getStore('breadCrum')
+		});
+
 		setTimeout(()=> {
 			this.setStore({
 				a: 'bbbb'

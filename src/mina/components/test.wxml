@@ -1,0 +1,4 @@
+<!--mina/components/test.wxml-->
+<text>
+    {{store.a}}
+</text>
