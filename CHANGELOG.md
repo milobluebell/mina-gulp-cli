@@ -1,3 +1,24 @@
+## [0.0.3](https://github.com/milobluebell/mina-gulp-cli/compare/0.0.2...0.0.3) (2019-03-29)
+
+
+### Documentation
+
+* **LICENSE:** 加入MIT许可证 ([303337c](https://github.com/milobluebell/mina-gulp-cli/commit/303337c))
+
+
+### Features
+
+* 引入状态管理工具aya-store完毕 ([227db65](https://github.com/milobluebell/mina-gulp-cli/commit/227db65))
+
+
+### BREAKING CHANGES
+
+* N
+Closes N
+* **LICENSE:** N
+
+
+
 ## 0.0.2 (2019-03-14)
 
 
