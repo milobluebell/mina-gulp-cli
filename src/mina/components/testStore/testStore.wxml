@@ -1,0 +1,6 @@
+<!--mina/components/test.wxml-->
+<block wx:for="{{store.testArr}}" wx:key="{{index}}">
+    <text>
+        {{store.a}}
+    </text>
+</block>

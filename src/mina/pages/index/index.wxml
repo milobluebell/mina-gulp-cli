@@ -6,14 +6,16 @@
 			<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
 			<text class="userinfo-nickname">{{userInfo.nickName}}</text>
 
-			<test />
 		</block>
 	</view>
 	<view class="usermotto">
-		<text class="user-motto">{{motto}} {{store.a}}</text>
-		<block wx:for="{{breads}}" wx:key="{{index}}">
-			<view data-index="{{index}}" bindtap="changeStore">{{index}}: {{item}}</view>
-		</block>
+		<text class="user-motto">{{motto}}</text>
+		<view>{{store.a}}</view>
+
+		<view style="border: solid 1px #7f7f7f;text-align:center;">
+			<test />
+		</view>
+		
 	</view>
 
 </view>

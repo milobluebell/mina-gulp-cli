@@ -1,8 +1,8 @@
 // mina/components/test.js
-import indexStore from './../pages/index/index.store';
+import indexStore from '../../pages/index/index.store';
 
 const store = getApp().store;
-Component(store.link({
+Component(store.link(indexStore, {
 
     store: indexStore,
 
@@ -26,4 +26,5 @@ Component(store.link({
     methods: {
 
     },
+
 }))

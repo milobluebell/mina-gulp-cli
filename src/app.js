@@ -5,6 +5,8 @@ import $Store from './mina/utils/Store/Store';
 const store = new $Store();
 App({
 	
+	store: store,
+
 	onLaunch: function () {
 
 		// ✏️ TODO: 发送请求示例
@@ -52,7 +54,5 @@ App({
 	globalData: {
 		userInfo: null
 	},
-
-	store: store
 
 })

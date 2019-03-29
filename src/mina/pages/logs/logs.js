@@ -1,11 +1,9 @@
 //logs.js
 import util from './../../utils/util';
-import logsStore from './logs.store';
+import IndexStore from './../index/index.store';
 
 const store = getApp().store;
-Page(store.link({
-
-	store: logsStore,
+Page(store.link(IndexStore, {
 
 	data: {
 		logs: []
@@ -20,7 +18,7 @@ Page(store.link({
 	},
 
 	onShow: function (){
-		console.log(store.set);
+		
 	}
 
 

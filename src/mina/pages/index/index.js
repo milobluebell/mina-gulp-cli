@@ -1,13 +1,11 @@
 import ROUTES from './../../config/routes';
-import indexStore from './index.store';
+import IndexStore from './index.store';
 
 //index.js
 //获取应用实例
 const app = getApp();
 const store = app.store;
-Page(store.link({
-
-	store: indexStore,
+Page(store.link(IndexStore, {
 
 	data: {
 		motto: 'Hello World',
@@ -54,23 +52,21 @@ Page(store.link({
 	},
 
 	changeStore: function (e){
-		console.log(e.currentTarget.dataset.index);
-		store.updateStore('breadCrum', {
-			
+		this.setStore({
+			a: e.currentTarget.dataset.index
 		});
 	},
 
 	onShow: function (){
 
-		this.setData({
-			breads: store.getStore('breadCrum')
-		});
-
-		setTimeout(()=> {
+		// 
+		setTimeout(()=>{
 			this.setStore({
-				a: 'bbbb'
+				a: '本数据由状态管理驱动',
+				testArr: [1,2,3]
 			})
-		}, 2000);
+		}, 3000);
+
 	},
 
 	getUserInfo: function(e) {
