@@ -1,12 +1,8 @@
 //app.js
 import $Http from './mina/utils/HttpClient/HttpClient';
-import $Store from 'aya-store';
 
-const store = new $Store();
 App({
 	
-	store: store,
-
 	onLaunch: function () {
 
 		// ✏️ TODO: 发送请求示例

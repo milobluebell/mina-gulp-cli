@@ -10,12 +10,6 @@
 	</view>
 	<view class="usermotto">
 		<text class="user-motto">{{motto}}</text>
-		<view>{{store.a}}</view>
-
-		<view style="border: solid 1px #7f7f7f;text-align:center;">
-			<test />
-		</view>
-		
 	</view>
 
 </view>

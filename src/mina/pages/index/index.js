@@ -1,11 +1,8 @@
 import ROUTES from './../../config/routes';
-import IndexStore from './index.store';
 
-//index.js
-//获取应用实例
+
 const app = getApp();
-const store = app.store;
-Page(store.link(IndexStore, {
+Page({
 
 	data: {
 		motto: 'Hello World',
@@ -50,22 +47,8 @@ Page(store.link(IndexStore, {
 		}
 
 	},
-
-	changeStore: function (e){
-		this.setStore({
-			a: e.currentTarget.dataset.index
-		});
-	},
-
+	
 	onShow: function (){
-
-		// 
-		setTimeout(()=>{
-			this.setStore({
-				a: '本数据由状态管理驱动',
-				testArr: [1,2,3]
-			})
-		}, 3000);
 
 	},
 
@@ -77,4 +60,4 @@ Page(store.link(IndexStore, {
 		})
 	}
 
-}))
+})

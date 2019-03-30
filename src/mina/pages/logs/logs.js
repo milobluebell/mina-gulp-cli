@@ -1,9 +1,7 @@
 //logs.js
 import util from './../../utils/util';
-import IndexStore from './../index/index.store';
 
-const store = getApp().store;
-Page(store.link(IndexStore, {
+Page({
 
 	data: {
 		logs: []
@@ -20,6 +18,4 @@ Page(store.link(IndexStore, {
 	onShow: function (){
 		
 	}
-
-
-}))
+})

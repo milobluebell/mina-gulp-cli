@@ -1,6 +1,4 @@
 {
     "navigationBarTitleText": "首页",
-    "usingComponents": {
-        "test": "/mina/components/testStore/testStore"
-    }
+    "usingComponents": {}
 }
