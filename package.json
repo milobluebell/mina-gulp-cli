@@ -24,9 +24,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {
-    "aya-store": "0.0.1"
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/milobluebell/mina-gulp-cli.git"
