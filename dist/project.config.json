@@ -9,10 +9,12 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.1",
+	"libVersion": "2.6.4",
 	"appid": "wx3f8287d8b32c737d",
 	"projectname": "mina-gulp-cli-project",
 	"debugOptions": {

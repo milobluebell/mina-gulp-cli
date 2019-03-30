@@ -1,6 +1,6 @@
 //app.js
 import $Http from './mina/utils/HttpClient/HttpClient';
-import $Store from './mina/utils/Store/Store';
+import $Store from 'aya-store';
 
 const store = new $Store();
 App({
