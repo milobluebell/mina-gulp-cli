@@ -26,6 +26,14 @@
 ```
 git clone https://github.com/milobluebell/mina-gulp-cli.git [demo_project]
 ```
+进入项目根目录，修改git远程：
+```
+// 删除remote
+git remote rm origin
+
+// 添加新的remote
+git remote add origin [你项目的git repo地址]
+```
 
 ### 2⃣️ Step 2： 使用[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)，导入项目(指向项目根目录的./dist文件夹)： 
 ![Image text](https://raw.githubusercontent.com/milobluebell/imgs-repo/master/img/intro-pic.png)
@@ -49,12 +57,14 @@ gulp watch
 ## 三、More 更多：
 
 ### 1. 修改git远程refs
-
+如果按照【使用方法 1.】中的方法，依然无法执行git push等操作，请重新指定git upstream：
+```
+git branch --set-upstream-to=origin/master master
+```
 
 
 ### 2. 长得帅的都扩展了阅读👇：
 请见：Tell Me More
-
 
 
 ## 计划中陆续加入的功能：

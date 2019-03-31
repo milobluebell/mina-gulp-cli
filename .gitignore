@@ -1,8 +1,8 @@
 .idea
 .vscode
 .DS_Store
+.npmignore
 node_modules
-
 dist/*
 !dist/project.config.json
 !dist/package.json
