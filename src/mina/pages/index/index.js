@@ -62,7 +62,7 @@ Page(store.link(IndexStore, {
 		// 
 		setTimeout(()=>{
 			this.setStore({
-				a: '本数据由状态管理驱动',
+				a: '数据由aya-store状态管理驱动',
 				testArr: [1,2,3]
 			})
 		}, 3000);

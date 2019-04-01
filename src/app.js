@@ -4,7 +4,7 @@ import $Store from 'aya-store';
 
 const store = new $Store();
 App({
-	
+
 	store: store,
 
 	onLaunch: function () {

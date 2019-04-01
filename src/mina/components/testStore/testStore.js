@@ -4,8 +4,6 @@ import indexStore from '../../pages/index/index.store';
 const store = getApp().store;
 Component(store.link(indexStore, {
 
-    store: indexStore,
-
     /**
      * 组件的属性列表
      */
