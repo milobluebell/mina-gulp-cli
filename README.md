@@ -67,7 +67,18 @@ git branch --set-upstream-to=origin/master master
 请见：Tell Me More
 
 
-## 计划中陆续加入的功能：
+### 3. 计划中陆续加入的功能：
 * 引入状态管理器，更方便地在页面和组件间传值。[✅DONE]：使用方式参见[**aya-store**](https://github.com/milobluebell/aya-store)文档
 * 加入Eslint，更一致化的代码规范管理。
 * 使用npm全局命令，更方便地执行脚手架命令，托管更多你想配备的小程序。
+
+
+
+## 四、协议 Licenses
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/milobluebell/mina-gulp-cli/blob/master/LICENSE)
+
+
+[![LICENSE](https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
