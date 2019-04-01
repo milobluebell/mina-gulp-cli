@@ -1,3 +1,8 @@
+## [0.0.4](https://github.com/milobluebell/mina-gulp-cli/compare/v0.0.3...v0.0.4) (2019-04-01)
+
+* **LICENSE:** 添加了996协议
+
+
 ## [0.0.3](https://github.com/milobluebell/mina-gulp-cli/compare/0.0.2...0.0.3) (2019-03-29)
 
 
