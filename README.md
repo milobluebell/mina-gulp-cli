@@ -1,6 +1,5 @@
 # Mina-Gulp-Cli
-
-
+[![HitCount](http://hits.dwyl.io/milobluebell/mina-gulp-cli.svg)](http://hits.dwyl.io/milobluebell/mina-gulp-cli)
 
 ## 一、针对哪些需求？
 
