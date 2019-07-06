@@ -1,3 +1,17 @@
+## [0.0.5](https://github.com/milobluebell/mina-gulp-cli/compare/0.0.4...0.0.5) (2019-07-06)
+
+
+### Bug Fixes
+
+* **修复一些缺陷，修改了$http模块:** RT ([e49bda7](https://github.com/milobluebell/mina-gulp-cli/commit/e49bda7))
+
+
+### Features
+
+* **README:** 加入hits统计 ([f6286d3](https://github.com/milobluebell/mina-gulp-cli/commit/f6286d3))
+
+
+
 ## [0.0.4](https://github.com/milobluebell/mina-gulp-cli/compare/v0.0.3...v0.0.4) (2019-04-01)
 
 * **LICENSE:** 添加了996协议
