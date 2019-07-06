@@ -1,11 +1,11 @@
-# Mina-Gulp-Cli
+# Mina-Gulp-Cli [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/milobluebell/mina-gulp-cli/blob/master/LICENSE)
 [![HitCount](http://hits.dwyl.io/milobluebell/mina-gulp-cli.svg)](http://hits.dwyl.io/milobluebell/mina-gulp-cli)
 
 ## 一、针对哪些需求？
 
 * **快速搭建功能强大还轻量**的微信小程序开发环境
   
-* 不推崇任何其它框架风格在小程序中的随意套用、**最小程度的代码入侵**，让微信小程序的本身被你安排得明明白白
+* 不推崇其它框架风格在小程序中的编译套用[(为什么我不推荐使用ta某ro，mp某vue之类的小程序开发框架？)](https://github.com/milobluebell/mina-gulp-cli#4-为什么我不推荐使用ta某ro，mp某vue之类的小程序开发框架)、**最小程度的代码入侵**，让微信小程序的本身被你安排得明明白白
   
 * 基于**ES6+** / **Sass**环境进行开发
   
@@ -70,6 +70,12 @@ git branch --set-upstream-to=origin/master master
 * 引入状态管理器，更方便地在页面和组件间传值。[✅DONE]：使用方式参见[**aya-store**](https://github.com/milobluebell/aya-store)文档
 * 加入Eslint，更一致化的代码规范管理。
 * 使用npm全局命令，更方便地执行脚手架命令，托管更多你想配备的小程序。
+
+
+### 4. 为什么我不推荐使用ta某ro，mp某vue之类的小程序开发框架？
+* 微信小程序本身还欠完善，缺陷比较多。环境不够稳定，对微信的基础业务高度敏感。比如经典的"取消分享到微信的回调"等问题。使得它的迭代速度非常快，而在这种情况下，一旦使用框架，意味着等待小程序底层一个更改，你至少需要等小程序修复完，再等框架修复完，然后才轮到你开始修复。加入的更新，也是一样的。这将对业务造成极大隐患。
+* 微信小程序并不是传统前端工程的单线程javascript，而是webview加jsEngine的双线程应用。跳离小程序原生的生命周期而进行的大规模开发，很容易出现因为线程问题导致的各种bug，而且排查起来非常困难。
+* 微信小程序本身封装程度已经比较高。像俄罗斯套娃一样一层套一层，很显然是没有必要的。除非你需要"一处编写，到处运行"
 
 
 

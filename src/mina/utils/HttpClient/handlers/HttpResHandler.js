@@ -4,12 +4,18 @@
  */
 
 class HttpResHandler {
+
+    // ✏️ TODO: 按需求处理返回数据
+    responseHandler(res){
+        return res;
+    }
     
     // ✏️ TODO: 处理异常
     errorHandler (error) {
-        console.log(error);
+        return error;
     }
 
 }
 
-export default new HttpResHandler
+const httpResHandler = new HttpResHandler();
+export default httpResHandler;

@@ -1,14 +1,15 @@
 //app.js
-import $Http from './mina/utils/HttpClient/HttpClient';
+import $http from './mina/utils/HttpClient/HttpClient';
 
 App({
 	
 	onLaunch: function () {
 
 		// ✏️ TODO: 发送请求示例
-		$Http.get({
+		$http.get({
 			url: '/app/mock/6799/global/getUserDetail'
 		}).then(res=> {
+			console.log(res);
 			
 		});
 

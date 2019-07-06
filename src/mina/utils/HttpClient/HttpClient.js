@@ -5,59 +5,55 @@
 import HttpResHandler from './handlers/HttpResHandler';
 import { MOCK_HOST } from './host';
 
-// headers
-const headers = {
-    'Authorization': '',
-}
+class $Http {
 
-// main
-const request = (url, data, method, header)=> {
-    if (typeof url === 'string' && typeof method === 'string') {
+    // ✏️ TODO: 做请求方法的配置
+    configs = {
+        baseUrl: MOCK_HOST,
+        headers: {
+            'Authorization': wx.getStorageSync('Authorization') || '',
+        }
+    }
+
+    // get方法
+    get(...args) {
+        if (args && args.length === 1 && typeof args[0] === 'string') {
+            // 支持形如 $http.get('https://www.testUrl.com?testKey=1234').then(res=>{})的请求
+            return this.request('GET', { url: args[0] });
+        } else {
+            const params = args[0];
+            return this.request('GET', params);
+        }
+    }
+
+    // post方法
+    post(params) {
+        return this.request('POST', params);
+    }
+
+    // main
+    request = (method, params = {}) => {
         return new Promise((resolve, reject) => {
             wx.request({
                 // ✏️ TODO: 修改MOCK_HOST
-                url: MOCK_HOST + url || '',
+                url: this.configs.baseUrl + params.url,
                 method,
-                header,
-                data,
-                success: res=> {
+                header: Object.assign(this.configs.headers, params.headers || {}),
+                data: params.data,
+                success: res => {
                     // ✏️ TODO: 填写要执行的正确响应的处理
-                    resolve(res.data);
+                    resolve(HttpResHandler.responseHandler(res.data));
                 },
-                fail: err=> {
+                fail: err => {
                     // ✏️ TODO: 填写要执行的错误响应的处理
                     HttpResHandler.errorHandler(err);
                     reject(err);
                 }
             })
         })
-    }else console.log('HttpClient接受的参数类型错误');
-}
-
-// Class
-class $Http {
-
-    // get方法
-    static get (...args) {
-        if(args.length === 1 && typeof args[0] === 'string'){
-            return request(args[0], {}, 'GET', headers);
-        } else {
-            const params = args[0];
-            return request(params.url, params.data, 'GET', Object.assign(headers, params.headers || {}));
-        }
-    }
-
-    // post方法
-    static post (params) {
-        request(params.url, params.data, 'POST', Object.assign(headers, params.headers));
-    }
-
-    // put方法
-    static put (params) {
-        request(params.url, params.data, 'PUT', Object.assign(headers, params.headers));
     }
 
 }
 
-
-export default $Http;
+const $http = new $Http();
+export default $http;
