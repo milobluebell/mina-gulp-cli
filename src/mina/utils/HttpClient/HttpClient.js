@@ -7,7 +7,7 @@ import { MOCK_HOST } from './host';
 
 class $Http {
 
-    // ✏️ TODO: 做请求方法的配置
+    // TODO: 做请求方法的配置 ✏️
     configs = {
         baseUrl: MOCK_HOST,
         headers: {
@@ -16,13 +16,13 @@ class $Http {
     }
 
     // get方法
-    get(...args) {
+    get (...args) {
         if (args && args.length === 1 && typeof args[0] === 'string') {
             // 支持形如 $http.get('https://www.testUrl.com?testKey=1234').then(res=>{})的请求
-            return this.request('GET', { url: args[0] });
+            this.request('GET', { url: args[0] });
         } else {
             const params = args[0];
-            return this.request('GET', params);
+            this.request('GET', params);
         }
     }
 
@@ -35,22 +35,22 @@ class $Http {
     request = (method, params = {}) => {
         return new Promise((resolve, reject) => {
             wx.request({
-                // ✏️ TODO: 修改MOCK_HOST
+                // TODO: 修改MOCK_HOST ✏️
                 url: this.configs.baseUrl + params.url,
                 method,
                 header: Object.assign(this.configs.headers, params.headers || {}),
                 data: params.data,
                 success: res => {
-                    // ✏️ TODO: 填写要执行的正确响应的处理
-                    resolve(HttpResHandler.responseHandler(res.data));
+                    // TODO: 填写要执行的正确响应的处理 ✏️
+                    return resolve(HttpResHandler.responseHandler(res.data));
                 },
                 fail: err => {
-                    // ✏️ TODO: 填写要执行的错误响应的处理
+                    // TODO: 填写要执行的错误响应的处理 ✏️
                     HttpResHandler.errorHandler(err);
                     reject(err);
                 }
             })
-        })
+        });
     }
 
 }

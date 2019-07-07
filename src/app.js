@@ -2,16 +2,13 @@
 import $http from './mina/utils/HttpClient/HttpClient';
 
 App({
-	
+
 	onLaunch: function () {
 
-		// ✏️ TODO: 发送请求示例
+		// TODO: 发送请求示例 ✏️
 		$http.get({
 			url: '/app/mock/6799/global/getUserDetail'
-		}).then(res=> {
-			console.log(res);
-			
-		});
+		})
 
 		// 展示本地存储能力
 		let logs = wx.getStorageSync('logs') || []

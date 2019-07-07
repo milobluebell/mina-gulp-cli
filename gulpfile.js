@@ -13,9 +13,9 @@ const arg = require("minimist")(process.argv.slice(2));
 //
 const re = /\/\*no-compile-start\*\/([\D\d]*)\/\*no-compile-end\*\//g;
 
-//
-const gulpSass = ()=> gulp.src('./src/**/*.scss')
-	.pipe(tap(file=> {
+// 编译sass
+const gulpSass = () => gulp.src('./src/**/*.scss')
+	.pipe(tap(file => {
 		let content = file.contents.toString();
 		content = content.replace(re, ($0, $1) => {
 			$1 = $1.trim();
@@ -24,7 +24,7 @@ const gulpSass = ()=> gulp.src('./src/**/*.scss')
 		file.contents = Buffer.from(content, 'utf-8');
 	}))
 	.pipe(sass({ outputStyle: 'expanded' })
-	.on('error', sass.logError))
+		.on('error', sass.logError))
 	.pipe(rename({
 		extname: '.wxss'
 	}))
@@ -36,21 +36,15 @@ const gulpSass = ()=> gulp.src('./src/**/*.scss')
 		file.contents = Buffer.from(content, 'utf-8');
 	}));
 
-//
-const copy = ()=> gulp.src(
-		[
-			'./src/**/*',
-			'!./src/**/*.scss',
-			'!./src/**/app.json',
-		]
-	)
-	.on('error', error=> {
-		console.error(error.toString())
-		this.emit('end');
-	});
+// 将.js文件之外的文件原封不动的复制过去
+const copy = () => gulp.src([
+	'./src/**/*',
+	'!./src/**/*.scss',
+	'!./src/**/app.json',
+])
 
 //
-const appJson = ()=> gulp.src('./src/**/app.json')
+const appJson = () => gulp.src('./src/**/app.json')
 	.pipe(tap(file => {
 		const content = JSON.parse(file.contents.toString());
 		const ROUTE = eval(fs.readFileSync('./src/mina/config/routes.js', 'utf-8'));
@@ -62,7 +56,7 @@ const appJson = ()=> gulp.src('./src/**/app.json')
 	}))
 
 //
-const dist = async(url)=> {
+const dist = async (url) => {
 	// 拷贝文件
 	gulpSass().pipe(gulp.dest(url));
 	copy().pipe(gulp.dest(url));
@@ -70,12 +64,12 @@ const dist = async(url)=> {
 }
 
 //
-const createElement = (type, name='customed-name')=> {
+const createElement = (type, name = 'customed-name') => {
 	let _target = 'page';
 	// 根据模版生成对应的内容
-	if(type === 'page'){
+	if (type === 'page') {
 		_target = type + 's';
-	}else if(type === 'comp'){
+	} else if (type === 'comp') {
 		_target = type + 'onents';
 	}
 	gulp.src([
@@ -84,26 +78,26 @@ const createElement = (type, name='customed-name')=> {
 		'./seeds/js/_' + _target + '.js',
 		'./seeds/json/_' + _target + '.json'
 	])
-	.pipe(rename({
-		basename: name == true ? 'untitled' : name
-	}))
-	.pipe(gulp.dest('./src/mina/' + _target));
+		.pipe(rename({
+			basename: name == true ? 'untitled' : name
+		}))
+		.pipe(gulp.dest('./src/mina/' + _target));
 }
 
 //
-const throwError = type=> {
-	if(type === 'create'){
+const throwError = type => {
+	if (type === 'create') {
 		console.error('Fatal Error: gulp create方法必须携带以下一种参数：');
 		console.group('--page [?name]');
-			console.log('用例：  gulp create --page untitled');
-			console.log('描述：  mock假接口环境');
+		console.log('用例：  gulp create --page untitled');
+		console.log('描述：  mock假接口环境');
 		console.groupEnd();
 		console.group('--comp [?name]');
-			console.log('用例：  gulp create --comp untitled');
-			console.log('描述：  开发环境');
+		console.log('用例：  gulp create --comp untitled');
+		console.log('描述：  开发环境');
 		console.groupEnd();
 		console.error('否则不会正确执行');
-	}else return false;
+	} else return false;
 }
 
 
@@ -117,25 +111,25 @@ const throwError = type=> {
 /**
  * @description 强制编译src
  */
-gulp.task('dist', async ()=> {
+gulp.task('dist', async () => {
 	await dist('./dist');
 })
 
 /**
  * @description 清空dist文件夹
  */
-gulp.task('create', async ()=> {
-	if(!arg.page && !arg.comp){
+gulp.task('create', async () => {
+	if (!arg.page && !arg.comp) {
 		throwError('create');
 		return false;
 	}
 	// 生成wxml
-	for (let i in arg){
-		if(i === 'page' || i === 'comp'){
+	for (let i in arg) {
+		if (i === 'page' || i === 'comp') {
 			await createElement(i, arg[i]);
-		}else if(i === '_'){
+		} else if (i === '_') {
 			//
-		}else throwError('create');
+		} else throwError('create');
 	}
 });
 
@@ -143,9 +137,9 @@ gulp.task('create', async ()=> {
  * @required
  * @description 热更新（开发时必须开启watch监听）
  */
-gulp.task('watch', ()=> {
+gulp.task('watch', () => {
 	let watcher = gulp.watch('./src');
-	watcher.on('change', function(event) {
+	watcher.on('change', function (event) {
 		dist('./dist');
 	});
 });

@@ -5,11 +5,11 @@
 
 * **快速搭建功能强大还轻量**的微信小程序开发环境
   
-* 不推崇其它框架风格在小程序中的编译套用[(为什么我不推荐使用ta某ro，mp某vue之类的小程序开发框架？)](https://github.com/milobluebell/mina-gulp-cli#4-为什么我不推荐使用ta某ro，mp某vue之类的小程序开发框架)、**最小程度的代码入侵**，让微信小程序的本身被你安排得明明白白
+* 不推崇其它框架风格在小程序中的编译套用[(为什么我不推荐使用ta某ro，mp某vue之类的小程序开发框架？)](https://github.com/milobluebell/mina-gulp-cli#4-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%B8%8D%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8ta%E6%9F%90romp%E6%9F%90vue%E4%B9%8B%E7%B1%BB%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6)、**最小程度的代码入侵**，让微信小程序的本身被你安排得明明白白
   
 * 基于**ES6+** / **Sass**环境进行开发
   
-* **使用Promise**替代小程序原生wx.request的回调地狱
+* **使用Promise、async|await**替代小程序原生wx.request的回调地狱
 
 * 搭载**状态管理工具**aya-store，避免疯狂地组件间直接传值（master分支上并不支持。如需要，请克隆withStore分支）
   
@@ -55,16 +55,10 @@ gulp watch
 
 ## 三、More 更多：
 
-### 1. 修改git远程refs
-如果按照【使用方法 1.】中的方法，依然无法执行git push等操作，请重新指定git upstream：
-```
-git branch --set-upstream-to=origin/master master
-```
-
-
-### 2. 长得帅的都扩展了阅读👇：
+### 1. 长得帅的都扩展了阅读👇：
 请见：Tell Me More
 
+### 2. 开箱即用之余，需要你做配置的地方，基本都标记了TODO，打开TODO清单一路了然
 
 ### 3. 计划中陆续加入的功能：
 * 引入状态管理器，更方便地在页面和组件间传值。[✅DONE]：使用方式参见[**aya-store**](https://github.com/milobluebell/aya-store)文档

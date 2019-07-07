@@ -22,7 +22,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.4",
+	"libVersion": "2.7.3",
 	"appid": "wx3f8287d8b32c737d",
 	"projectname": "mina-gulp-cli-project",
 	"debugOptions": {
