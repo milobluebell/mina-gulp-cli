@@ -1,3 +1,12 @@
+## [0.0.6](https://github.com/milobluebell/mina-gulp-cli/compare/0.0.4...0.0.6) (2019-07-07)
+
+
+### Performance Improvements
+
+* **优化了一些东西:** RT ([9cd6345](https://github.com/milobluebell/mina-gulp-cli/commit/9cd6345))
+
+
+
 ## [0.0.5](https://github.com/milobluebell/mina-gulp-cli/compare/0.0.4...0.0.5) (2019-07-06)
 
 
