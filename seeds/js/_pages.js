@@ -1,12 +1,25 @@
 
 Page({
-	data: {},
-	//
-	onLoad() {},
-	onReady() {},
-	onShow() {},
-	onPullDownRefresh() {},
-	onReachBottom() {},
-	onShareAppMessage() {},
-	onPageScroll() {},
+    data: {
+
+    },
+    //
+    onLoad() {
+
+    },
+    onReady() {
+
+    },
+    onShow() {
+
+    },
+    onPullDownRefresh() {
+
+    },
+    onReachBottom() {
+
+    },
+    onShareAppMessage() {
+
+    }
 })

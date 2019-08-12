@@ -2,8 +2,13 @@
 ***** 在这里引入的css模块不会被索引编译 *****
 no-compile-end *****/
 
-.untitled-wrapper{
-  .untitled-container{
+.untitled-wrapper {
+    width: 100%;
+    height: 100%;
 
-  }
+	.untitled-container {
+        width: 100%;
+        height: 100%;
+        
+	}
 }
