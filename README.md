@@ -9,7 +9,7 @@
   
 * 基于**ES6+** / **Sass**环境进行开发
   
-* **使用Promise、async|await**替代小程序原生wx.request的回调地狱
+* **使用Promise**替代小程序原生wx.request的回调地狱
 
 * 搭载**状态管理工具**aya-store，避免疯狂地组件间直接传值（master分支上并不支持。如需要，请克隆withStore分支）
   
@@ -55,14 +55,38 @@ gulp watch
 
 ## 三、More 更多：
 
-### 1. 长得帅的都扩展了阅读👇：
-请见：Tell Me More
+### 1. 项目文档结构：
+```
+
+// 编译结果。小程序开发者工具指向的位置
+---- dist                            
+    -- /mina
+    -- app.js
+    -- app.json
+    -- app.wxss
+    -- project.config.json
+
+// 用于指令gulp create生成页面/组件的模板。
+---- seeds
+    -- css
+    -- js
+    -- json
+    -- wxml
+
+// 项目开发目录，dist文件即是它的编译结果
+---- src
+    --- /mina
+    --- app.js
+    --- app.json
+    --- app.scss
+    
+```
+
 
 ### 2. 开箱即用之余，需要你做配置的地方，基本都标记了TODO，打开TODO清单一路了然
 
 ### 3. 计划中陆续加入的功能：
 * 引入状态管理器，更方便地在页面和组件间传值。[✅DONE]：使用方式参见[**aya-store**](https://github.com/milobluebell/aya-store)文档
-* 加入Eslint，更一致化的代码规范管理。
 * 使用npm全局命令，更方便地执行脚手架命令，托管更多你想配备的小程序。
 
 
