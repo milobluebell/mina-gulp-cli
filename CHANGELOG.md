@@ -1,3 +1,12 @@
+## [0.0.7](https://github.com/milobluebell/mina-gulp-cli/compare/0.0.6...0.0.7) (2019-08-14)
+
+
+### Features
+
+* **修改一下结构:** rt ([e3fade4](https://github.com/milobluebell/mina-gulp-cli/commit/e3fade4))
+
+
+
 ## [0.0.6](https://github.com/milobluebell/mina-gulp-cli/compare/0.0.4...0.0.6) (2019-07-07)
 
 

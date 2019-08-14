@@ -1,6 +1,6 @@
 {
   "name": "mina-gulp-cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "a light-weight wechat mina(mini program) client developing stage, powered by gulp",
   "main": "gulpfiles.js",
   "scripts": {
