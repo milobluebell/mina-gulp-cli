@@ -1,7 +1,16 @@
 .idea
 .vscode
 .DS_Store
+
 node_modules
-dist/*
+npm-debug.log*
+
+/dist
 !dist/project.config.json
 !dist/package.json
+
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

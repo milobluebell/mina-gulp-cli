@@ -68,10 +68,10 @@ gulp watch
 
 // 用于指令gulp create生成页面/组件的模板。
 ---- seeds
-    -- css
-    -- js
-    -- json
-    -- wxml
+    -- /css
+    -- /js
+    -- /json
+    -- /wxml
 
 // 项目开发目录，dist文件即是它的编译结果
 ---- src
